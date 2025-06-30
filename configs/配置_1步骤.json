@@ -1,0 +1,41 @@
+{
+    "window_title": "微信",
+    "regions": [
+        {
+            "name": "王赛新",
+            "type": "按钮",
+            "rect": {
+                "x": 86,
+                "y": 610,
+                "width": 284,
+                "height": 84
+            },
+            "thumbnail": null,
+            "template_path": ""
+        }
+    ],
+    "data_source": {
+        "type": "database",
+        "path": "C:/Users/宇中的人/OneDrive/桌面/4_培养基数据1_扩展.xlsx"
+    },
+    "operations": [
+        {
+            "region": {
+                "name": "王赛新",
+                "rect": {
+                    "height": 84,
+                    "width": 284,
+                    "x": 86,
+                    "y": 610
+                },
+                "template_path": "",
+                "thumbnail": null,
+                "type": "按钮"
+            },
+            "action": "click",
+            "config": {
+                "times": 1
+            }
+        }
+    ]
+}
