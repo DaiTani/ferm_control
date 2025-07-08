@@ -1,0 +1,10 @@
+**/__pycache__
+wandb
+**.tar
+**/**.tar
+**/**/**.tar
+*.jpg
+*.npz
+# **/*.xlsx
+# logs/
+# data_analysis/

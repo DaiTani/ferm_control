@@ -1,0 +1,28 @@
+python 1.py --Timestamp 2021-07-14T08:45:43 --weights logs/LSTM_Data5_Batch-28/weights_best.tar --dataset ./Data5 --model lstm --hidden_dim 16 --num_layers 2
+
+原代码
+    # 定义输入特征的边界
+    varbound = np.array([
+        [0, 14],  # m_ls_opt_do
+        [20, 40],  # m_temp
+        [0, 1200],  # m_stirrer
+        [0, 100],  # dm_o2
+        [0, 100],  # dm_air
+        [0, 100],  # dm_spump1
+        [0, 100],  # dm_spump2
+        [0, 100],  # dm_spump3
+        [0, 100],  # dm_spump4
+        [0, 1]  # induction (二进制变量)
+    ])
+
+从固定范围调整为：
+首选获取数据集中Timestamp对应的m_ls_opt_do
+m_temp
+m_stirrer
+dm_o2
+dm_air
+dm_spump1
+dm_spump2
+dm_spump3
+dm_spump4
+induction数值，然后以m_temp数值+正负1、m_stirrer+正负100、m_ls_opt_do数值+正负10、dm_air+正负100、dm_spump1+正负1、dm_spump2+正负1、dm_spump3+正负1、dm_spump3+正负5、induction+正负0.1的方式定义输入特征的边界
